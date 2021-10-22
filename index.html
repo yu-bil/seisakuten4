@@ -48,11 +48,11 @@ function clock() {
   now = new Date(timeCity);
 
   //時間の取得
-  var hour =now.getHours();
+  var hour = 10*now.getHours();
   //分の取得
-  var min = now.getMinutes();
+  var min = 10*now.getMinutes();
   //秒の取得
-  var sec = now.getSeconds();
+  var sec = 10*now.getSeconds();
 
   //２桁表示に変更
   if (hour < 10)hour = "0" + hour; //hourなんて変数作ってない上の時間の取得でhourに直して解決
@@ -107,7 +107,7 @@ function clock() {
 </style>
 
 </head>
-  <body onload="setInterval(clock,100);"> <!-- onloadではなくonLoadになってたので修整、また呼び出し関数名と、時間の間が,じゃなく.だったので修整 -->
+  <body onload="setInterval(clock,1000);"> <!-- onloadではなくonLoadになってたので修整、また呼び出し関数名と、時間の間が,じゃなく.だったので修整 -->
     <p>世界時計</p>
     <hr>
     <div id="clock">
